@@ -1,0 +1,23 @@
+@import "./shared.scss";
+
+* {
+  font-family: "Comfortaa", serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--grey);
+    transition: background 2s;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+}
