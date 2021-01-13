@@ -75,7 +75,6 @@ export default {
       return this.darkMode
     },
     getBorder(){
-      console.log(this.darkMode)
       if(this.darkMode){
         return "#F4F5F5"
       }else{
@@ -104,10 +103,6 @@ export default {
 
 .navbar-item {
   padding: 0 1.2vw 0 1.2vw;
-  text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
 }
 
 .navbarItemColor {
@@ -120,7 +115,7 @@ export default {
 .navbarItemColorDark {
   color: var(--white);
   &:hover {
-    color: var(--primary);
+    color: var(--dark);
   }
 }
 </style>

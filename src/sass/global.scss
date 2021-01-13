@@ -13,11 +13,14 @@ html {
     padding: 0;
     position: relative;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--grey);
     transition: background 2s;
   }
 
   p {
     font-size: 0.8em;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
