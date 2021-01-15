@@ -10,13 +10,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
+  faEnvelope,
   faPhoneSquareAlt
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
   faFacebook,
   faLinkedin,
-  faPhoneSquareAlt
+  faPhoneSquareAlt,
+  faEnvelope
 );
 
 Vue.component('fa', FontAwesomeIcon);
@@ -24,6 +26,8 @@ Vue.component('fa', FontAwesomeIcon);
 Vue.config.productionTip = false
 
 Vue.use(VueParticles);
+
+document.title = "Lennert Moorthamer";
 
 new Vue({
   render: h => h(App)
