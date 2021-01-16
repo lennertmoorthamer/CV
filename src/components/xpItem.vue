@@ -27,25 +27,27 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  background-color: rgba(255, 255, 255, 0.4);
+  height: 15vh;
+  border-radius: 0.5em;
+  background-color: var(--dark);
   width: 45%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: 2vh;
-  box-shadow: 0px 0px 5px var(--dark);
-  color: var(--dark);
+  color: var(--grey);
+  z-index: 2;
 
   img {
-    box-shadow: 8px 0 10px -10px var(--white);
+    box-shadow: 8px 0 10px -10px var(--black);
     padding: 1em;
-    width: 7vw;
-    height: 7vw;
+    width: 5vw;
+    height: 5vw;
     object-fit: contain;
   }
 
-  .info{
+  .info {
     width: 70%;
   }
 }

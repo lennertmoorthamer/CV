@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import './sass/global.scss';
 import VueParticles from 'vue-particles';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {

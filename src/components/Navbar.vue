@@ -98,7 +98,7 @@ export default {
   min-height: 5vh;
   padding-top: 3vh;
   margin-right: 5%;
-  background-color: transparent;
+  font-size: 1.1em;
 }
 
 .navbar-item {
@@ -108,14 +108,14 @@ export default {
 .navbarItemColor {
   color: var(--dark);
   &:hover {
-    color: var(--primary-dark);
+    color: var(--primary);
   }
 }
 
 .navbarItemColorDark {
   color: var(--white);
   &:hover {
-    color: var(--dark);
+    color: var(--primary);
   }
 }
 </style>
