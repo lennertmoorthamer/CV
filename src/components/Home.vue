@@ -46,6 +46,7 @@ export default {
   align-items: center;
   width: 80%;
   z-index: 2;
+  pointer-events: none;
 
   h1,
   h2 {

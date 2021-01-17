@@ -3,17 +3,17 @@
     <navbar />
     <section id="Home">
       <home-page />
-      <div class="homeLine"></div>
+      <div class="line homeLine"></div>
     </section>
     <section id="About">
       <about />
-      <div class="aboutLine"></div>
-      <div class="aboutLineDown"></div>
+      <div class="line aboutLine"></div>
+      <div class="line aboutLineDown"></div>
     </section>
     <section id="Experience">
       <experience />
-      <div class="experienceLine"></div>
-      <div class="experienceLineDown"></div>
+      <div class="line experienceLine"></div>
+      <div class="line experienceLineDown"></div>
     </section>
     <section id="Skills">
       <skills-page />
@@ -52,54 +52,45 @@ section:nth-child(odd) {
   background: var(--white);
 }
 
-.homeLine {
+.line {
   position: absolute;
+  box-shadow: 0px 0px 3px 1px var(--primary);
+  width: 1px;
+}
+
+.homeLine {
   left: 20%;
   bottom: 0;
-  width: 1px;
   background-color: var(--primary-dark);
-  box-shadow: 0px 0px 3px 1px var(--primary);
   height: 50%;
 }
 
 .aboutLine {
-  position: absolute;
   left: 20%;
   top: 0;
-  width: 1px;
   background-color: var(--primary);
-  box-shadow: 0px 0px 3px 1px var(--primary);
   height: 60%;
 }
 
 .aboutLineDown {
-  position: absolute;
   right: 20%;
   bottom: 0;
-  width: 1px;
   background-color: var(--primary);
-  box-shadow: 0px 0px 3px 1px var(--primary);
   height: 60%;
 }
 
 .experienceLine {
-  position: absolute;
   right: 20%;
   top: 0;
-  width: 1px;
   background-color: var(--primary-dark);
-  box-shadow: 0px 0px 3px 1px var(--primary);
-  height: 70%;
+  height: 85%;
 }
 
 .experienceLineDown {
-  position: absolute;
   left: 15%;
   bottom: 0;
-  width: 1px;
   background-color: var(--primary-dark);
-  box-shadow: 0px 0px 3px 1px var(--primary);
-  height: 60%;
+  height: 85%;
 }
 
 .particles {

@@ -1,12 +1,11 @@
 <template>
   <nav
-    class="navbarHolder"
+    id="navbarHolder"
     role="navigation"
     aria-label="main navigation"
     :style="'border-bottom: 1px solid' + getBorder"
   >
     <a
-      @click="changeMode(true)"
       :class="{
         navbarItemColor: !getMode,
         navbarItemColorDark: getMode,
@@ -17,7 +16,7 @@
       Home
     </a>
     <a
-      @click="changeMode(false)"
+      @click="changeMode(true, 2)"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -28,7 +27,7 @@
       About
     </a>
     <a
-      @click="changeMode(true)"
+      @click="changeMode(false, 3)"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -39,7 +38,7 @@
       Experience
     </a>
     <a
-      @click="changeMode(false)"
+      @click="changeMode(true, 4)"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -62,13 +61,20 @@ export default {
     };
   },
   methods:{
-    changeMode(dark){
-      if(dark){
-        this.darkMode = true
-      }else{
-        setTimeout(() => this.darkMode = false, 500);
+    handleScroll(){
+      switch(Math.floor((window.pageYOffset + document.getElementById('navbarHolder').offsetHeight) / window.innerHeight)){
+        case(0): this.darkMode = true; break;
+        case(1): this.darkMode = false; break;
+        case(2): this.darkMode = true; break;
+        case(3): this.darkMode = false; break;
       }
     }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   computed: {
     getMode(){
@@ -86,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbarHolder {
+#navbarHolder {
   position: fixed;
   top: 0;
   right: 0;

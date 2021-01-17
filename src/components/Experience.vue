@@ -1,6 +1,5 @@
 <template>
   <div class="xpHolder">
-    <h1 class="ml">Experience</h1>
     <div class="xpItemHolder">
       <xp-item v-for="(xp, i) in xps" :key="i" :item="xp" />
     </div>
@@ -49,10 +48,6 @@ export default {
   .xpItemHolder {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  .ml {
-    margin-left: 2vh;
   }
 }
 </style>
