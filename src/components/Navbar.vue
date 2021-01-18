@@ -6,6 +6,7 @@
     :style="'border-bottom: 1px solid' + getBorder"
   >
     <a
+      @click="emitAnimation('home')"
       :class="{
         navbarItemColor: !getMode,
         navbarItemColorDark: getMode,
@@ -16,7 +17,7 @@
       Home
     </a>
     <a
-      @click="changeMode(true, 2)"
+      @click="emitAnimation('about')"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -27,7 +28,7 @@
       About
     </a>
     <a
-      @click="changeMode(false, 3)"
+      @click="emitAnimation('experience')"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -38,7 +39,7 @@
       Experience
     </a>
     <a
-      @click="changeMode(true, 4)"
+      @click="emitAnimation('skill')"
       class="navbar-item"
       :class="{
         navbarItemColor: !getMode,
@@ -68,6 +69,9 @@ export default {
         case(2): this.darkMode = true; break;
         case(3): this.darkMode = false; break;
       }
+    },
+    emitAnimation(page){
+       this.$emit(page,true);
     }
   },
   created () {

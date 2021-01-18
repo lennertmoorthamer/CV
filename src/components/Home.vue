@@ -68,6 +68,17 @@ export default {
     &:hover {
       color: var(--primary);
     }
+    pointer-events: auto;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .homeHolder {
+    width: 95%;
+
+    .pf {
+      width: 16%;
+    }
   }
 }
 </style>

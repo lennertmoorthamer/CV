@@ -6,7 +6,7 @@
         <h1>Diploma's</h1>
         <h2>Middelbaar Onderwijs</h2>
         <p>Boekhouden Informatica</p>
-        <p>Sint-Maarten Bovenschool - 9140 Beveren</p>
+        <p>Sint-Maarten Bovenschool - 9120 Beveren</p>
         <h2>Professionele Bachelor</h2>
         <p>Toegepaste Informatica</p>
         <p>Afstudeerrichting Full Stack</p>
