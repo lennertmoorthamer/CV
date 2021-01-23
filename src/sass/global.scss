@@ -37,10 +37,14 @@ html {
   }
 
   .animateText {
-    -webkit-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Safari 4+ */
-    -moz-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Fx 5+ */
-    -o-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Opera 12+ */
-    animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: animateTextFade 1.5s infinite; /* Safari 4+ */
+    -moz-animation: animateTextFade 1.5s infinite; /* Fx 5+ */
+    -o-animation: animateTextFade 1.5s infinite; /* Opera 12+ */
+    animation: animateTextFade 1.5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: animateTextOpacity 3s infinite; /* Safari 4+ */
+    -moz-animation: animateTextOpacity 3s infinite; /* Fx 5+ */
+    -o-animation: animateTextOpacity 3s infinite; /* Opera 12+ */
+    animation: animateTextOpacity 3s infinite; /* IE 10+, Fx 29+ */
   }
 
   @keyframes animateTextOpacity {
