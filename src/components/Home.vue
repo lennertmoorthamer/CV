@@ -36,6 +36,10 @@ export default {
         mail: "",
         tel: "",
     }
+  },
+  created() {
+    this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
+    this.tel = atob("MDQ3MTQ5NzM4NA==")
   }
 };
 </script>

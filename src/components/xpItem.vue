@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  height: 15vh;
+  height: 12vh;
   border-radius: 0.5em;
   background-color: var(--dark);
   width: 45%;

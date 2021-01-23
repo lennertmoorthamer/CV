@@ -2,7 +2,7 @@
   <div class="aboutHolder">
     <!-- <img :src="bg" alt="background" /> -->
     <div class="contentHolder">
-      <div  class="dipl">
+      <div class="dipl" :class="{ animateText: this.animation }">
         <h1>Diploma's</h1>
         <h2>Middelbaar Onderwijs</h2>
         <p>Boekhouden Informatica</p>
@@ -12,14 +12,20 @@
         <p>Afstudeerrichting Full Stack</p>
         <p>Karel De Grote Hogeschool - 2000 Antwerpen</p>
         <p>Microservices & User Experience</p>
+        <h2>Extra</h2>
+        <p>Rijbewijs B</p>
+        <p>Vaarbewijs - Algemeen stuurbrevet</p>
       </div>
-      <div class="pers">
+      <div class="pers" :class="{ animateText: animation }">
         <h2>Woonplaats</h2>
         <p>Elsstraat-Zuid, 9140 Temse</p>
         <h2>Nationaliteit</h2>
         <p>Belg</p>
         <h2>Geboortedatum</h2>
         <p>10 Augustus 1999</p>
+        <h2>Contact</h2>
+        <p>{{ this.tel }}</p>
+        <p>{{ this.mail }}</p>
       </div>
     </div>
   </div>
@@ -29,10 +35,22 @@
 
 export default {
   name: 'Home',
+  props:{
+     animation: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
      return {
+       mail: "",
+       tel: ""
     };
   },
+    created() {
+    this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
+    this.tel = atob("MDQ3MTQ5NzM4NA==")
+  }
 };
 </script>
 
@@ -52,7 +70,7 @@ export default {
     justify-content: space-evenly;
 
     .dipl {
-      margin-top: 5%;
+      margin-top: 3%;
     }
 
     .pers {

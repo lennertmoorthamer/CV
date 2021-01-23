@@ -50,7 +50,7 @@
         <p slot="legend-caption">Python</p>
       </vue-ellipse-progress>
     </div>
-    <div class="holder">
+    <div class="holder" :class="{ animateText: animation }">
       <div class="taal">
         <h2>Talenkennis</h2>
         <p>Nederlands: Moedertaal</p>
@@ -74,6 +74,12 @@
 
 export default {
   name: 'Skills',
+   props:{
+     animation: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
      return {
     };

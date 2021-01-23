@@ -11,8 +11,10 @@ import sheer from '../assets/sheerenshuis.png';
 import niko from '../assets/Niko.png';
 import wbt from '../assets/wbt.png';
 import volvo from '../assets/volvo.png';
+import prana from '../assets/prana.svg';
 import studant from '../assets/studant.png';
 import alten from '../assets/alten.png';
+import purna from '../assets/purna.png';
 import xpItem from './xpItem.vue';
 
 export default {
@@ -24,16 +26,14 @@ export default {
         xps: [
         {"company" : "Restaurant S'Heerenshuis", "locatie" : "9120 Melsele", "title" : "Afwasser/Ober", "pic" : sheer},
         {"company" : "Niko Group", "locatie" : "9100 Sint-Niklaas", "title" : "Monteren schakelaars", "pic" : niko},
+        {"company" : "Prananatha", "locatie" : "9250 Waasmunster", "title" : "Magazijnier", "pic" : prana},
         {"company" : "Wij blijven thuis", "locatie" : "9100 Sint-Niklaas", "title" : "Logistiek medewerker", "pic" : wbt},
         {"company" : "Volvo Trucks", "locatie" : "9041 Gent", "title" : "Plaatsen benzinetanks/Banden spannen", "pic" : volvo},
         {"company" : "Studant", "locatie" : "2000 Antwerpen", "title" : "Bijles Informatica aan Hogeschool", "pic" : studant},
         {"company" : "Alten BE", "locatie" : "1060 Bruxelles", "title" : "IT Dienst", "pic" : alten},
+        {"company" : "Purna Pharmaceuticals", "locatie" : "2870 Puurs", "title" : "Verpakking", "pic" : purna},
       ]
     };
-  },
-  created() {
-    this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
-    this.tel = atob("MDQ3MTQ5NzM4NA==")
   }
 };
 </script>

@@ -1,9 +1,9 @@
 <template>
   <article>
     <navbar
-      v-on:home="handleHomeAnimation($event)"
+      v-on:home="handleHomeAnimation()"
       v-on:about="handleAboutAnimation($event)"
-      v-on:experience="handleExperienceAnimation($event)"
+      v-on:experience="handleExperienceAnimation()"
       v-on:skill="handleSkillAnimation($event)"
     />
     <section id="Home">
@@ -11,26 +11,26 @@
       <div class="line homeLine"></div>
     </section>
     <section id="About">
-      <about />
+      <about :animation="this.aboutAnimations" />
       <div class="line aboutLine"></div>
       <div class="circle aboutCircle"></div>
       <div class="line aboutLineDown"></div>
       <div class="circle aboutCircleDown"></div>
     </section>
     <section id="Experience">
-      <experience />
+      <experience/>
       <div class="line experienceLine"></div>
       <div class="circle experienceCircle"></div>
       <div class="line experienceLineDown"></div>
       <div class="circle experienceCircleDown"></div>
     </section>
     <section id="Skills">
-      <skills-page />
+      <skills-page :animation="this.skillsAnimations"/>
       <div class="line skillsLine"></div>
       <div class="circle skillsCircle"></div>
       <img
         class="wave"
-        :class="{ waveAnimation: this.waveAnimation }"
+        :class="{ waveAnimation: this.skillsAnimations }"
         :src="wave"
       />
     </section>
@@ -52,24 +52,26 @@ export default {
   data(){
     return{
       wave: waveImage,
-      waveAnimation: false
+      aboutAnimations: false,
+      skillsAnimations: false,
     }
   },
   methods:{
-    handleHomeAnimation(event){
-      console.log(event)
-      this.waveAnimation = false
+    handleHomeAnimation(){
+      this.aboutAnimations = false
+      this.skillsAnimations = false
     },
     handleAboutAnimation(event){
-      console.log(event)
-      this.waveAnimation = false
+      this.aboutAnimations = event
+      this.skillsAnimations = false
     },
-    handleExperienceAnimation(event){
-      console.log(event)
-      this.waveAnimation = false
+    handleExperienceAnimation(){
+      this.aboutAnimations = false
+      this.skillsAnimations = false
     },
     handleSkillAnimation(event){
-      this.waveAnimation = event
+      this.aboutAnimations = false
+      this.skillsAnimations = event
     }
   }
 };

@@ -35,4 +35,27 @@ html {
   h3 {
     font-size: 1.2em;
   }
+
+  .animateText {
+    animation-name: animateTextOpacity, animateTextFade;
+    animation-duration: 3s, 1.5s;
+  }
+
+  @keyframes animateTextOpacity {
+    0% {
+      opacity: 0%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  @keyframes animateTextFade {
+    0% {
+      padding-top: 10%;
+    }
+    100% {
+      padding-top: 0%;
+    }
+  }
 }
