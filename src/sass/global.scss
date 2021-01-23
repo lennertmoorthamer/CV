@@ -37,8 +37,10 @@ html {
   }
 
   .animateText {
-    animation-name: animateTextOpacity, animateTextFade;
-    animation-duration: 3s, 1.5s;
+    -webkit-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Safari 4+ */
+    -moz-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Fx 5+ */
+    -o-animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* Opera 12+ */
+    animation: animateTextOpacity, animateTextFade 3s, 1.5s infinite; /* IE 10+, Fx 29+ */
   }
 
   @keyframes animateTextOpacity {
