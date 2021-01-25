@@ -211,7 +211,7 @@ section:nth-child(odd) {
   z-index: 1;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1300px) {
   .homeLine {
     left: 10%;
   }

@@ -66,7 +66,7 @@ export default {
   .contentHolder {
     z-index: 2;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
 
     .dipl {
@@ -76,6 +76,27 @@ export default {
     .pers {
       text-align: right;
       margin-top: 30%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .contentHolder {
+    padding-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .aboutHolder {
+    width: 50%;
+    .contentHolder {
+      padding-top: 0;
+      flex-direction: column;
+      justify-content: center;
+
+      .pers {
+        text-align: left;
+      }
     }
   }
 }

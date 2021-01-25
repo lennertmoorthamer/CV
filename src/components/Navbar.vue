@@ -1,61 +1,80 @@
 <template>
-  <nav
-    id="navbarHolder"
-    role="navigation"
-    aria-label="main navigation"
-    :style="'border-bottom: 1px solid' + getBorder"
-  >
-    <a
-      @click="emitAnimation('home')"
-      :class="{
-        navbarItemColor: !getMode,
-        navbarItemColorDark: getMode,
-      }"
-      class="navbar-item"
-      href="#Home"
+  <div>
+    <Slide id="hamburgerMenu" :closeOnNavigation="true">
+      <a href="#Home">
+        <span>Home</span>
+      </a>
+      <a href="#About">
+        <span>About</span>
+      </a>
+      <a href="#Experience">
+        <span>Experience</span>
+      </a>
+      <a href="#Skills">
+        <span>Skills</span>
+      </a>
+    </Slide>
+    <nav
+      id="defaultNavbar"
+      role="navigation"
+      aria-label="main navigation"
+      :style="'border-bottom: 1px solid' + getBorder"
     >
-      Home
-    </a>
-    <a
-      @click="emitAnimation('about')"
-      class="navbar-item"
-      :class="{
-        navbarItemColor: !getMode,
-        navbarItemColorDark: getMode,
-      }"
-      href="#About"
-    >
-      About
-    </a>
-    <a
-      @click="emitAnimation('experience')"
-      class="navbar-item"
-      :class="{
-        navbarItemColor: !getMode,
-        navbarItemColorDark: getMode,
-      }"
-      href="#Experience"
-    >
-      Experience
-    </a>
-    <a
-      @click="emitAnimation('skill')"
-      class="navbar-item"
-      :class="{
-        navbarItemColor: !getMode,
-        navbarItemColorDark: getMode,
-      }"
-      href="#Skills"
-    >
-      Skills
-    </a>
-  </nav>
+      <a
+        @click="emitAnimation('home')"
+        :class="{
+          navbarItemColor: !getMode,
+          navbarItemColorDark: getMode,
+        }"
+        class="navbar-item"
+        href="#Home"
+      >
+        Home
+      </a>
+      <a
+        @click="emitAnimation('about')"
+        class="navbar-item"
+        :class="{
+          navbarItemColor: !getMode,
+          navbarItemColorDark: getMode,
+        }"
+        href="#About"
+      >
+        About
+      </a>
+      <a
+        @click="emitAnimation('experience')"
+        class="navbar-item"
+        :class="{
+          navbarItemColor: !getMode,
+          navbarItemColorDark: getMode,
+        }"
+        href="#Experience"
+      >
+        Experience
+      </a>
+      <a
+        @click="emitAnimation('skill')"
+        class="navbar-item"
+        :class="{
+          navbarItemColor: !getMode,
+          navbarItemColorDark: getMode,
+        }"
+        href="#Skills"
+      >
+        Skills
+      </a>
+    </nav>
+  </div>
 </template>
 
 <script>
-
+  import { Slide } from 'vue-burger-menu'
 export default {
   name: 'Navbar',
+  components: {
+      Slide 
+  },
   data() {
      return {
       darkMode: true,
@@ -63,7 +82,7 @@ export default {
   },
   methods:{
     handleScroll(){
-      switch(Math.floor((window.pageYOffset + document.getElementById('navbarHolder').offsetHeight) / window.innerHeight)){
+      switch(Math.floor((window.pageYOffset + document.getElementById('defaultNavbar').offsetHeight) / window.innerHeight)){
         case(0): this.darkMode = true; break;
         case(1): this.darkMode = false; break;
         case(2): this.darkMode = true; break;
@@ -95,8 +114,38 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-#navbarHolder {
+<style lang="scss">
+#hamburgerMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  height: 5vh;
+  width: 5vh;
+  padding-top: 3vh;
+  padding-right: 3vw;
+
+  .bm-burger-button {
+    left: 0;
+  }
+  .bm-burger-bars {
+    background-color: #fdec00;
+    box-shadow: 0px 0px 2px 1px var(--primary-dark);
+  }
+  .bm-cross {
+    background: #f4f5f5;
+  }
+  .bm-menu {
+    background-color: rgba(56, 56, 58, 0.9);
+  }
+  .bm-item-list {
+    color: #f4f5f5;
+    font-size: 1.2em;
+  }
+}
+
+#defaultNavbar {
   position: fixed;
   top: 0;
   right: 0;
@@ -126,6 +175,22 @@ export default {
   color: var(--white);
   &:hover {
     color: var(--primary);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #defaultNavbar {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #defaultNavbar {
+    display: none;
+  }
+
+  #hamburgerMenu {
+    display: inline;
   }
 }
 </style>
