@@ -66,7 +66,7 @@ export default {
   .contentHolder {
     z-index: 2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
 
     .dipl {
