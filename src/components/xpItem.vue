@@ -51,4 +51,32 @@ export default {
     width: 70%;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  h3 {
+    font-size: 0.6em;
+  }
+
+  .container {
+    height: 9vh;
+    width: 60%;
+    margin: 1vh;
+    color: var(--grey);
+    z-index: 2;
+
+    img {
+      box-shadow: 8px 0 10px -10px var(--black);
+      width: 7vw;
+      height: 9vw;
+      object-fit: contain;
+      padding: 0;
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+
+    .info {
+      width: 80%;
+    }
+  }
+}
 </style>

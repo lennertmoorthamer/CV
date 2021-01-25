@@ -51,4 +51,10 @@ export default {
     justify-content: center;
   }
 }
+
+@media only screen and (max-width: 650px) {
+  .xpHolder {
+    width: 100%;
+  }
+}
 </style>
