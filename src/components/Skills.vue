@@ -6,7 +6,7 @@
         :progress="90"
         color="#fdec00"
         emptyColor="#b4b4b4"
-        :size="100"
+        :size="80"
         :thickness="8"
         emptyThickness="8"
       >
@@ -18,7 +18,7 @@
         :progress="90"
         color="#fdec00"
         emptyColor="#b4b4b4"
-        :size="100"
+        :size="80"
         :thickness="8"
         emptyThickness="8"
       >
@@ -30,7 +30,7 @@
         :progress="70"
         color="#fdec00"
         emptyColor="#b4b4b4"
-        :size="100"
+        :size="80"
         :thickness="8"
         emptyThickness="8"
       >
@@ -42,7 +42,7 @@
         :progress="50"
         color="#fdec00"
         emptyColor="#b4b4b4"
-        :size="100"
+        :size="80"
         :thickness="8"
         emptyThickness="8"
       >
@@ -90,6 +90,7 @@ export default {
 <style lang="scss" scoped>
 .skillsHolder {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   z-index: 2;
   width: 50%;
@@ -103,6 +104,10 @@ export default {
     display: flex;
     flex-direction: column;
     width: 20%;
+    height: 100%;
+    p {
+      font-size: 0.7em;
+    }
 
     .progItem {
       margin: 5%;
@@ -113,6 +118,34 @@ export default {
     text-align: right;
     .vaar {
       margin-top: 10vh;
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .skillsHolder {
+    width: 100%;
+    height: 80%;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .prog {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      height: 20%;
+      .progItem {
+        margin: 1%;
+      }
+    }
+    .holder {
+      margin-top: 5%;
+      text-align: right;
+      width: 70%;
+      .vaar {
+        margin-top: 10vh;
+      }
     }
   }
 }

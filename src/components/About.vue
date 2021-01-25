@@ -86,7 +86,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
   .aboutHolder {
     width: 50%;
     .contentHolder {
@@ -96,6 +96,23 @@ export default {
 
       .pers {
         text-align: left;
+        margin-top: 10%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .aboutHolder {
+    width: 50%;
+    .contentHolder {
+      padding-top: 0;
+      flex-direction: column;
+      justify-content: center;
+
+      .pers {
+        text-align: left;
+        margin-top: 10%;
       }
     }
   }
