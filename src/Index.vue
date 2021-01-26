@@ -10,6 +10,11 @@
     <div id="indexHolder">
       <section id="Home">
         <home-page />
+        <vue-particles
+          class="particles"
+          :particlesNumber="80"
+          color="#F4F5F5"
+        />
         <div class="line homeLine"></div>
       </section>
       <section id="About">
@@ -90,181 +95,190 @@ export default {
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
   -webkit-font-smoothing: antialiased;
-   scroll-behavior: smooth;
-}
+  scroll-behavior: smooth;
 
-section {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-
-  &:nth-of-type(even) {
-    background-color: var(--white);
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
   }
 
-  &:nth-of-type(odd) {
-    background-color: var(--black);
+  section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+    &:nth-of-type(even) {
+      background-color: var(--white);
+    }
+
+    &:nth-of-type(odd) {
+      background-color: var(--black);
+    }
   }
-}
 
-.line {
-  position: absolute;
-  box-shadow: 0px 0px 3px 1px var(--primary);
-  width: 1px;
-  z-index: 1;
-}
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-  height: 3vh;
-  width: 3vh;
-  box-shadow: 0px 0px 2px 1px var(--primary);
-  z-index: 1;
-}
-
-.homeLine {
-  left: 20%;
-  bottom: 0;
-  background-color: var(--primary-dark);
-  height: 50%;
-}
-
-.aboutLine {
-  left: 20%;
-  top: 0;
-  background-color: var(--primary);
-  height: 60%;
-}
-
-.aboutCircle {
-  left: calc(20% - 1.5vh - 3px);
-  top: 60%;
-  border: 3px solid var(--primary);
-}
-
-.aboutLineDown {
-  right: 20%;
-  bottom: 0;
-  background-color: var(--primary);
-  height: 60%;
-}
-
-.aboutCircleDown {
-  right: calc(20% - 1.5vh - 3px);
-  bottom: 60%;
-  border: 3px solid var(--primary);
-}
-
-.experienceLine {
-  right: 20%;
-  top: 0;
-  background-color: var(--primary-dark);
-  height: 85%;
-}
-
-.experienceCircle {
-  right: calc(20% - 1.5vh - 3px);
-  top: 85%;
-  border: 3px solid var(--primary-dark);
-}
-
-.experienceLineDown {
-  left: 20%;
-  bottom: 0;
-  background-color: var(--primary-dark);
-  height: 85%;
-}
-
-.experienceCircleDown {
-  left: calc(20% - 1.5vh - 3px);
-  bottom: 85%;
-  border: 3px solid var(--primary-dark);
-}
-
-.skillsLine {
-  left: 20%;
-  top: 0;
-  background-color: var(--primary);
-  height: 60%;
-}
-
-.skillsCircle {
-  left: calc(20% - 1.5vh - 3px);
-  top: 60%;
-  border: 3px solid var(--primary);
-}
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20%;
-}
-
-.waveAnimation {
-  animation-name: waveUp;
-  animation-duration: 3s;
-}
-
-@keyframes waveUp {
-  0% {
-    height: 0%;
+  .line {
+    position: absolute;
+    box-shadow: 0px 0px 3px 1px var(--primary);
+    width: 1px;
+    z-index: 1;
   }
-  100% {
-    height: 20%;
-  }
-}
 
-@media only screen and (max-width: 1400px) {
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    height: 3vh;
+    width: 3vh;
+    box-shadow: 0px 0px 2px 1px var(--primary);
+    z-index: 1;
+  }
+
   .homeLine {
-    left: 10%;
+    left: 20%;
+    bottom: 0;
+    background-color: var(--primary-dark);
+    height: 50%;
   }
 
   .aboutLine {
-    left: 10%;
+    left: 20%;
+    top: 0;
+    background-color: var(--primary);
+    height: 60%;
   }
 
   .aboutCircle {
-    left: calc(10% - 1.5vh - 3px);
+    left: calc(20% - 1.5vh - 3px);
+    top: 60%;
+    border: 3px solid var(--primary);
   }
 
   .aboutLineDown {
-    right: 10%;
+    right: 20%;
+    bottom: 0;
+    background-color: var(--primary);
+    height: 60%;
   }
 
   .aboutCircleDown {
-    right: calc(10% - 1.5vh - 3px);
+    right: calc(20% - 1.5vh - 3px);
+    bottom: 60%;
+    border: 3px solid var(--primary);
   }
 
   .experienceLine {
-    right: 10%;
+    right: 20%;
+    top: 0;
+    background-color: var(--primary-dark);
+    height: 85%;
   }
 
   .experienceCircle {
-    right: calc(10% - 1.5vh - 3px);
+    right: calc(20% - 1.5vh - 3px);
     top: 85%;
     border: 3px solid var(--primary-dark);
   }
 
   .experienceLineDown {
-    left: 10%;
+    left: 20%;
+    bottom: 0;
+    background-color: var(--primary-dark);
+    height: 85%;
   }
 
   .experienceCircleDown {
-    left: calc(10% - 1.5vh - 3px);
+    left: calc(20% - 1.5vh - 3px);
+    bottom: 85%;
+    border: 3px solid var(--primary-dark);
   }
 
   .skillsLine {
-    left: 10%;
+    left: 20%;
+    top: 0;
+    background-color: var(--primary);
+    height: 60%;
   }
 
   .skillsCircle {
-    left: calc(10% - 1.5vh - 3px);
+    left: calc(20% - 1.5vh - 3px);
+    top: 60%;
+    border: 3px solid var(--primary);
+  }
+
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+  }
+
+  .waveAnimation {
+    animation-name: waveUp;
+    animation-duration: 3s;
+  }
+
+  @keyframes waveUp {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 1400px) {
+    .homeLine {
+      left: 10%;
+    }
+
+    .aboutLine {
+      left: 10%;
+    }
+
+    .aboutCircle {
+      left: calc(10% - 1.5vh - 3px);
+    }
+
+    .aboutLineDown {
+      right: 10%;
+    }
+
+    .aboutCircleDown {
+      right: calc(10% - 1.5vh - 3px);
+    }
+
+    .experienceLine {
+      right: 10%;
+    }
+
+    .experienceCircle {
+      right: calc(10% - 1.5vh - 3px);
+      top: 85%;
+      border: 3px solid var(--primary-dark);
+    }
+
+    .experienceLineDown {
+      left: 10%;
+    }
+
+    .experienceCircleDown {
+      left: calc(10% - 1.5vh - 3px);
+    }
+
+    .skillsLine {
+      left: 10%;
+    }
+
+    .skillsCircle {
+      left: calc(10% - 1.5vh - 3px);
+    }
   }
 }
 </style>
