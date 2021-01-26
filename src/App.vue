@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <index id="page-wrap" />
+    <index />
   </div>
 </template>
 

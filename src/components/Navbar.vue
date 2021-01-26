@@ -81,12 +81,12 @@ export default {
     };
   },
   methods:{
-    handleScroll(){
-      switch(Math.floor((window.pageYOffset + document.getElementById('defaultNavbar').offsetHeight) / window.innerHeight)){
-        case(0): this.darkMode = true; break;
-        case(1): this.darkMode = false; break;
-        case(2): this.darkMode = true; break;
-        case(3): this.darkMode = false; break;
+     handleScroll(){
+      switch(Math.floor(Math.floor(document.getElementById('indexHolder').scrollTop +2 + document.getElementById('indexHolder').offsetHeight) / window.innerHeight)){
+        case(1): this.darkMode = true; break;
+        case(2): this.darkMode = false; break;
+        case(3): this.darkMode = true; break;
+        case(4): this.darkMode = false; break;
       }
     },
     emitAnimation(page){
@@ -94,10 +94,12 @@ export default {
     }
   },
   created () {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener("load", () =>
+      document.getElementById('indexHolder').addEventListener('scroll', () => this.handleScroll())
+    );
   },
   destroyed () {
-    window.removeEventListener('scroll', this.handleScroll);
+    document.getElementById('indexHolder').removeEventListener('scroll', () => this.handleScroll());
   },
   computed: {
     getMode(){

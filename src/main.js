@@ -4,6 +4,7 @@ import './sass/global.scss';
 import VueParticles from 'vue-particles';
 import VueEllipseProgress from 'vue-ellipse-progress';
 
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {

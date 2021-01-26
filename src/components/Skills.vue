@@ -93,7 +93,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   z-index: 2;
-  width: 50%;
+  width: 60%;
   height: 90%;
   h2,
   h2 {

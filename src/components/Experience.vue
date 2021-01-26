@@ -40,7 +40,10 @@ export default {
 
 <style lang="scss" scoped>
 .xpHolder {
+  display: flex;
+  align-items: center;
   width: 90%;
+
   h1,
   h2 {
     color: var(--white);

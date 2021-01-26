@@ -1,44 +1,48 @@
 <template>
-  <article>
+  <div>
     <navbar
+      id="menu"
       v-on:home="handleHomeAnimation()"
       v-on:about="handleAboutAnimation($event)"
       v-on:experience="handleExperienceAnimation()"
       v-on:skill="handleSkillAnimation($event)"
     />
-    <section id="Home">
-      <home-page />
-      <div class="line homeLine"></div>
-    </section>
-    <section id="About">
-      <about :animation="this.aboutAnimations" />
-      <div class="line aboutLine"></div>
-      <div class="circle aboutCircle"></div>
-      <div class="line aboutLineDown"></div>
-      <div class="circle aboutCircleDown"></div>
-    </section>
-    <section id="Experience">
-      <experience/>
-      <div class="line experienceLine"></div>
-      <div class="circle experienceCircle"></div>
-      <div class="line experienceLineDown"></div>
-      <div class="circle experienceCircleDown"></div>
-    </section>
-    <section id="Skills">
-      <skills-page :animation="this.skillsAnimations"/>
-      <div class="line skillsLine"></div>
-      <div class="circle skillsCircle"></div>
-      <img
-        class="wave"
-        :class="{ waveAnimation: this.skillsAnimations }"
-        :src="wave"
-      />
-    </section>
-    <vue-particles class="particles" :particlesNumber="80" color="#F4F5F5" />
-  </article>
+    <div id="indexHolder">
+      <section id="Home">
+        <home-page />
+        <div class="line homeLine"></div>
+      </section>
+      <section id="About">
+        <about :animation="this.aboutAnimations" />
+        <div class="line aboutLine"></div>
+        <div class="circle aboutCircle"></div>
+        <div class="line aboutLineDown"></div>
+        <div class="circle aboutCircleDown"></div>
+      </section>
+      <section id="Experience">
+        <experience />
+        <div class="line experienceLine"></div>
+        <div class="circle experienceCircle"></div>
+        <div class="line experienceLineDown"></div>
+        <div class="circle experienceCircleDown"></div>
+      </section>
+      <section id="Skills">
+        <skills-page :animation="this.skillsAnimations" />
+        <div class="line skillsLine"></div>
+        <div class="circle skillsCircle"></div>
+        <img
+          class="wave"
+          :class="{ waveAnimation: this.skillsAnimations }"
+          :src="wave"
+        />
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
+
+
 import Navbar from './components/Navbar.vue';
 import Experience from './components/Experience.vue';
 import HomePage from './components/Home.vue';
@@ -78,26 +82,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#indexHolder {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-font-smoothing: antialiased;
+   scroll-behavior: smooth;
+}
+
 section {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  scroll-snap-align: start;
 
-section:nth-child(even) {
-  background: var(--black);
-}
+  &:nth-of-type(even) {
+    background-color: var(--white);
+  }
 
-section:nth-child(odd) {
-  background: var(--white);
+  &:nth-of-type(odd) {
+    background-color: var(--black);
+  }
 }
 
 .line {
   position: absolute;
   box-shadow: 0px 0px 3px 1px var(--primary);
   width: 1px;
+  z-index: 1;
 }
 
 .circle {
@@ -106,6 +123,7 @@ section:nth-child(odd) {
   height: 3vh;
   width: 3vh;
   box-shadow: 0px 0px 2px 1px var(--primary);
+  z-index: 1;
 }
 
 .homeLine {
@@ -202,16 +220,7 @@ section:nth-child(odd) {
   }
 }
 
-.particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1400px) {
   .homeLine {
     left: 10%;
   }

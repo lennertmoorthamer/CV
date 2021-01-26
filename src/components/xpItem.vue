@@ -52,7 +52,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 800px) {
   h3 {
     font-size: 0.6em;
   }

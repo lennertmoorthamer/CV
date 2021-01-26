@@ -20,6 +20,7 @@
         ><fa class="icon" :icon="['fas', 'envelope']"
       /></a>
     </div>
+    <vue-particles class="particles" :particlesNumber="80" color="#F4F5F5" />
   </div>
 </template>
 
@@ -49,8 +50,18 @@ export default {
   display: flex;
   align-items: center;
   width: 80%;
+  height: 100%;
   z-index: 2;
   pointer-events: none;
+
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+  }
 
   h1,
   h2 {
@@ -76,7 +87,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1400px) {
   .homeHolder {
     width: 95%;
 
