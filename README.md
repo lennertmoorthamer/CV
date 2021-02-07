@@ -1,4 +1,4 @@
-# cvsite
+# Lennert Moorthamer
 
 ## Project setup
 ```

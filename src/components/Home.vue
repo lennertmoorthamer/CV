@@ -1,24 +1,27 @@
 <template>
   <div class="homeHolder">
+    <img class="logo" :src="logo" alt="Lennert Logo" />
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
       <h2>Student Toegepaste Informatica - Full stack</h2>
       <h2>Karel De Grote Hogeschool</h2>
-      <a target="_blank" href="https://www.facebook.com/lennert.moorthamer"
-        ><fa class="icon" :icon="['fab', 'facebook']"
-      /></a>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/lennert-moorthamer-143b0b1b5/"
-        ><fa class="icon" :icon="['fab', 'linkedin']"
-      /></a>
-      <a :href="'tel:' + this.tel"
-        ><fa class="icon" :icon="['fas', 'phone-square-alt']"
-      /></a>
-      <a :href="'mailto:' + this.mail"
-        ><fa class="icon" :icon="['fas', 'envelope']"
-      /></a>
+      <div class="iconHolder">
+        <a target="_blank" href="https://www.facebook.com/lennert.moorthamer"
+          ><fa class="icon" :icon="['fab', 'facebook']"
+        /></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/lennert-moorthamer-143b0b1b5/"
+          ><fa class="icon" :icon="['fab', 'linkedin']"
+        /></a>
+        <a :href="'tel:' + this.tel"
+          ><fa class="icon" :icon="['fas', 'phone-square-alt']"
+        /></a>
+        <a :href="'mailto:' + this.mail"
+          ><fa class="icon" :icon="['fas', 'envelope']"
+        /></a>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +29,7 @@
 <script>
 
 import picture from '../assets/pf.jpg';
+import logo from '../assets/logo.png';
 
 export default {
   name: 'Home',
@@ -35,6 +39,7 @@ export default {
         pf: picture,
         mail: "",
         tel: "",
+        logo: logo,
     }
   },
   created() {
@@ -51,9 +56,20 @@ export default {
   width: 80%;
   z-index: 2;
   pointer-events: none;
+
   h1,
   h2 {
     color: var(--white);
+  }
+
+  .logo {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 2vw;
+    z-index: 2;
   }
 
   .pf {
@@ -65,14 +81,18 @@ export default {
     z-index: 2;
   }
 
-  .icon {
-    font-size: 2em;
-    color: var(--white);
-    margin-right: 1vw;
-    &:hover {
-      color: var(--primary);
+  .iconHolder {
+    margin-top: 2vh;
+
+    .icon {
+      font-size: 2em;
+      color: var(--white);
+      margin-right: 1vw;
+      &:hover {
+        color: var(--primary);
+      }
+      pointer-events: auto;
     }
-    pointer-events: auto;
   }
 }
 

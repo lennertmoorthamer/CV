@@ -12,7 +12,8 @@
         <home-page />
         <vue-particles
           class="particles"
-          :particlesNumber="80"
+          :particlesNumber="90"
+          clickMode="repulse"
           color="#F4F5F5"
         />
         <div class="line homeLine"></div>

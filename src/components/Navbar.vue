@@ -1,6 +1,11 @@
 <template>
   <div>
-    <Slide id="hamburgerMenu" :closeOnNavigation="true">
+    <Slide
+      id="hamburgerMenu"
+      :closeOnNavigation="true"
+      @openMenu="this.handleOpenMenu"
+      @closeMenu="this.handleCloseMenu"
+    >
       <a href="#Home">
         <span>Home</span>
       </a>
@@ -14,70 +19,72 @@
         <span>Skills</span>
       </a>
     </Slide>
-    <nav
-      id="defaultNavbar"
-      role="navigation"
-      aria-label="main navigation"
-      :style="'border-bottom: 1px solid' + getBorder"
-    >
-      <a
-        @click="emitAnimation('home')"
-        :class="{
-          navbarItemColor: !getMode,
-          navbarItemColorDark: getMode,
-        }"
-        class="navbar-item"
-        href="#Home"
+    <nav class="navHolder" role="navigation">
+      <div
+        id="defaultNavbar"
+        aria-label="main navigation"
+        :style="'border-bottom: 1px solid' + getBorder"
       >
-        Home
-      </a>
-      <a
-        @click="emitAnimation('about')"
-        class="navbar-item"
-        :class="{
-          navbarItemColor: !getMode,
-          navbarItemColorDark: getMode,
-        }"
-        href="#About"
-      >
-        About
-      </a>
-      <a
-        @click="emitAnimation('experience')"
-        class="navbar-item"
-        :class="{
-          navbarItemColor: !getMode,
-          navbarItemColorDark: getMode,
-        }"
-        href="#Experience"
-      >
-        Experience
-      </a>
-      <a
-        @click="emitAnimation('skill')"
-        class="navbar-item"
-        :class="{
-          navbarItemColor: !getMode,
-          navbarItemColorDark: getMode,
-        }"
-        href="#Skills"
-      >
-        Skills
-      </a>
+        <a
+          @click="emitAnimation('home')"
+          :class="{
+            navbarItemColor: !getMode,
+            navbarItemColorDark: getMode,
+          }"
+          class="navbar-item"
+          href="#Home"
+        >
+          Home
+        </a>
+        <a
+          @click="emitAnimation('about')"
+          class="navbar-item"
+          :class="{
+            navbarItemColor: !getMode,
+            navbarItemColorDark: getMode,
+          }"
+          href="#About"
+        >
+          About
+        </a>
+        <a
+          @click="emitAnimation('experience')"
+          class="navbar-item"
+          :class="{
+            navbarItemColor: !getMode,
+            navbarItemColorDark: getMode,
+          }"
+          href="#Experience"
+        >
+          Experience
+        </a>
+        <a
+          @click="emitAnimation('skill')"
+          class="navbar-item"
+          :class="{
+            navbarItemColor: !getMode,
+            navbarItemColorDark: getMode,
+          }"
+          href="#Skills"
+        >
+          Skills
+        </a>
+      </div>
     </nav>
   </div>
 </template>
 
 <script>
-  import { Slide } from 'vue-burger-menu'
+  import { Slide } from 'vue-burger-menu';
 export default {
   name: 'Navbar',
   components: {
-      Slide 
+      Slide
   },
   data() {
      return {
       darkMode: true,
+      hideBurger: false
     };
   },
   methods:{
@@ -91,7 +98,19 @@ export default {
     },
     emitAnimation(page){
        this.$emit(page,true);
-    }
+    },
+    handleOpenMenu(){
+      var x = document.getElementsByClassName("bm-burger-button")[0];
+      x.style.display = "none";
+      x.style.cursor = "default";
+      x.style.pointerEvents = "none";
+    },
+    handleCloseMenu(){
+      var x = document.getElementsByClassName("bm-burger-button")[0];
+      x.style.display = "block";
+      x.style.cursor = "pointer";
+      x.style.pointerEvents = "auto";
+    } 
   },
   created () {
     window.addEventListener("load", () =>

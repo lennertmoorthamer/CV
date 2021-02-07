@@ -1,6 +1,5 @@
 <template>
   <div class="aboutHolder">
-    <!-- <img :src="bg" alt="background" /> -->
     <div class="contentHolder">
       <div class="dipl" :class="{ animateText: this.animation }">
         <h1>Diploma's</h1>
