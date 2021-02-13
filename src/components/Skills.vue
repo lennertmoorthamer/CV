@@ -1,54 +1,18 @@
 <template>
   <div class="skillsHolder">
     <div class="prog">
-      <vue-ellipse-progress
-        class="progItem"
-        :progress="90"
-        color="#fdec00"
-        emptyColor="#b4b4b4"
-        :size="80"
-        :thickness="8"
-        emptyThickness="8"
-      >
-        <span slot="legend-value">%</span>
-        <p slot="legend-caption">Java</p>
-      </vue-ellipse-progress>
-      <vue-ellipse-progress
-        class="progItem"
-        :progress="90"
-        color="#fdec00"
-        emptyColor="#b4b4b4"
-        :size="80"
-        :thickness="8"
-        emptyThickness="8"
-      >
-        <span slot="legend-value">%</span>
-        <p slot="legend-caption">Javascript</p>
-      </vue-ellipse-progress>
-      <vue-ellipse-progress
-        class="progItem"
-        :progress="70"
-        color="#fdec00"
-        emptyColor="#b4b4b4"
-        :size="80"
-        :thickness="8"
-        emptyThickness="8"
-      >
-        <span slot="legend-value">%</span>
-        <p slot="legend-caption">C#</p>
-      </vue-ellipse-progress>
-      <vue-ellipse-progress
-        class="progItem"
-        :progress="50"
-        color="#fdec00"
-        emptyColor="#b4b4b4"
-        :size="80"
-        :thickness="8"
-        emptyThickness="8"
-      >
-        <span slot="legend-value">%</span>
-        <p slot="legend-caption">Python</p>
-      </vue-ellipse-progress>
+      <div class="progress-circle-container">
+        <div class="progress-circle progress-90"><span>90%</span></div>
+      </div>
+      <div class="progress-circle-container">
+        <div class="progress-circle progress-90"><span>90%</span></div>
+      </div>
+      <div class="progress-circle-container">
+        <div class="progress-circle progress-70"><span>70%</span></div>
+      </div>
+      <div class="progress-circle-container">
+        <div class="progress-circle progress-50"><span>50%</span></div>
+      </div>
     </div>
     <div class="holder" :class="{ animateText: animation }">
       <div class="taal">
@@ -105,14 +69,90 @@ export default {
     flex-direction: column;
     width: 20%;
     height: 100%;
+
     p {
       font-size: 0.7em;
     }
 
-    .progItem {
-      margin: 5%;
+    .progress-circle {
+      position: relative;
+      width: 12vh;
+      height: 12vh;
+      margin-top: 1vh;
+      margin-left: 3vw;
+      border-radius: 50%;
+
+      span {
+        font-size: 1em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 10vh;
+        height: 10vh;
+        line-height: 10vh;
+        margin-left: -5vh;
+        margin-top: -5vh;
+        text-align: center;
+        border-radius: 50%;
+        background: var(--white);
+        z-index: 1;
+      }
+    }
+
+    .progress-circle:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .progress-circle.progress-90:after {
+      background-image: linear-gradient(
+          54deg,
+          var(--primary) 50%,
+          transparent 50%,
+          transparent
+        ),
+        linear-gradient(
+          270deg,
+          var(--primary) 50%,
+          var(--grey) 50%,
+          var(--grey)
+        );
+    }
+
+    .progress-circle.progress-70:after {
+      background-image: linear-gradient(
+          -18deg,
+          var(--primary) 50%,
+          transparent 50%,
+          transparent
+        ),
+        linear-gradient(
+          270deg,
+          var(--primary) 50%,
+          var(--grey) 50%,
+          var(--grey)
+        );
+    }
+
+    .progress-circle.progress-50:after {
+      background-image: linear-gradient(
+          -90deg,
+          var(--primary) 50%,
+          transparent 50%,
+          transparent
+        ),
+        linear-gradient(
+          270deg,
+          var(--primary) 50%,
+          var(--grey) 50%,
+          var(--grey)
+        );
     }
   }
+
   .holder {
     margin-top: 20%;
     text-align: right;
@@ -135,8 +175,17 @@ export default {
       justify-content: center;
       width: 100%;
       height: 20%;
-      .progItem {
-        margin: 1%;
+      .progress-circle {
+        width: 10vh;
+        height: 10vh;
+
+        span {
+          width: 8vh;
+          height: 8vh;
+          line-height: 8vh;
+          margin-left: -4vh;
+          margin-top: -4vh;
+        }
       }
     }
     .holder {
@@ -145,6 +194,24 @@ export default {
       width: 70%;
       .vaar {
         margin-top: 10vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .skillsHolder .prog {
+    .progress-circle {
+      width: 15vw;
+      height: 15vw;
+
+      span {
+        font-size: 0.8em;
+        width: 12vw;
+        height: 12vw;
+        line-height: 12vw;
+        margin-left: -6vw;
+        margin-top: -6vw;
       }
     }
   }

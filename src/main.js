@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import './sass/global.scss';
 import VueParticles from 'vue-particles';
-import VueEllipseProgress from 'vue-ellipse-progress';
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -29,7 +28,6 @@ Vue.component('fa', FontAwesomeIcon);
 Vue.config.productionTip = false
 
 Vue.use(VueParticles);
-Vue.use(VueEllipseProgress);
 
 document.title = "Lennert Moorthamer";
 

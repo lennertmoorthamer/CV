@@ -1,6 +1,5 @@
 <template>
   <div class="homeHolder">
-    <img class="logo" :src="logo" alt="Lennert Logo" />
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
@@ -60,16 +59,6 @@ export default {
   h1,
   h2 {
     color: var(--white);
-  }
-
-  .logo {
-    width: 2vw;
-    height: 2vw;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 2vw;
-    z-index: 2;
   }
 
   .pf {

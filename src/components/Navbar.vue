@@ -151,11 +151,10 @@ export default {
     left: 0;
   }
   .bm-burger-bars {
-    background-color: #fdec00;
-    box-shadow: 0px 0px 2px 1px var(--primary-dark);
+    background-color: var(--primary);
   }
   .bm-cross {
-    background: #f4f5f5;
+    background: var(--white);
   }
   .bm-menu {
     background-color: rgba(56, 56, 58, 0.9);
