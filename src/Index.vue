@@ -88,6 +88,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#indexHolder::-webkit-scrollbar {
+  width: 0.5vw;
+}
+#indexHolder::-webkit-scrollbar-track {
+  background-color: var(--white);
+}
+#indexHolder::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: var(--primary);
+}
+
 #indexHolder {
   position: relative;
   width: 100vw;
