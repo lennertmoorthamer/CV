@@ -2,16 +2,36 @@
   <div class="skillsHolder">
     <div class="prog">
       <div class="progress-circle-container">
-        <div class="progress-circle progress-90"><span>90%</span></div>
+        <div class="progress-circle progress-90">
+          <span>
+            <p>Java</p>
+            <p>90%</p>
+          </span>
+        </div>
       </div>
       <div class="progress-circle-container">
-        <div class="progress-circle progress-90"><span>90%</span></div>
+        <div class="progress-circle progress-90">
+          <span>
+            <p>Javascript</p>
+            <p>90%</p>
+          </span>
+        </div>
       </div>
       <div class="progress-circle-container">
-        <div class="progress-circle progress-70"><span>70%</span></div>
+        <div class="progress-circle progress-70">
+          <span>
+            <p>C#</p>
+            <p>70%</p>
+          </span>
+        </div>
       </div>
       <div class="progress-circle-container">
-        <div class="progress-circle progress-50"><span>50%</span></div>
+        <div class="progress-circle progress-50">
+          <span>
+            <p>Python</p>
+            <p>50%</p>
+          </span>
+        </div>
       </div>
     </div>
     <div class="holder" :class="{ animateText: animation }">
@@ -90,13 +110,22 @@ export default {
         display: block;
         width: 10vh;
         height: 10vh;
-        line-height: 10vh;
+        line-height: 4vh;
         margin-left: -5vh;
         margin-top: -5vh;
         text-align: center;
         border-radius: 50%;
         background: var(--white);
         z-index: 1;
+
+        p {
+          margin: 0;
+          height: 3vh;
+
+          &:first-child {
+            margin-top: 2vh;
+          }
+        }
       }
     }
 
@@ -182,9 +211,12 @@ export default {
         span {
           width: 8vh;
           height: 8vh;
-          line-height: 8vh;
           margin-left: -4vh;
           margin-top: -4vh;
+
+          p:first-child {
+            margin-top: 1vh;
+          }
         }
       }
     }
@@ -209,9 +241,12 @@ export default {
         font-size: 0.8em;
         width: 12vw;
         height: 12vw;
-        line-height: 12vw;
         margin-left: -6vw;
         margin-top: -6vw;
+
+        p:first-child {
+          margin-top: 0vh;
+        }
       }
     }
   }
