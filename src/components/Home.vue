@@ -63,7 +63,7 @@ export default {
 
   .pf {
     width: 25%;
-    height: auto;
+    height: 25%;
     border-radius: 50%;
     margin-right: 5vw;
     box-shadow: 0 10px 10px -7px var(--primary);
