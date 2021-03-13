@@ -40,6 +40,7 @@
           class="wave"
           :class="{ waveAnimation: this.skillsAnimations }"
           :src="wave"
+          alt="wave"
         />
       </section>
     </div>

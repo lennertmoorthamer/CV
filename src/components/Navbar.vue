@@ -6,18 +6,10 @@
       @openMenu="this.handleOpenMenu"
       @closeMenu="this.handleCloseMenu"
     >
-      <a href="#Home">
-        <span>Home</span>
-      </a>
-      <a href="#About">
-        <span>About</span>
-      </a>
-      <a href="#Experience">
-        <span>Experience</span>
-      </a>
-      <a href="#Skills">
-        <span>Skills</span>
-      </a>
+      <a href="#Home"> Home </a>
+      <a href="#About"> About </a>
+      <a href="#Experience"> Experience </a>
+      <a href="#Skills"> Skills </a>
     </Slide>
     <nav class="navHolder" role="navigation">
       <div
@@ -187,7 +179,7 @@ export default {
 .navbarItemColor {
   color: var(--dark);
   &:hover {
-    color: var(--primary);
+    color: var(--primary-dark);
   }
 }
 

@@ -6,10 +6,14 @@
       <h2>Student Toegepaste Informatica - Full stack</h2>
       <h2>Karel De Grote Hogeschool</h2>
       <div class="iconHolder">
-        <a target="_blank" href="https://www.facebook.com/lennert.moorthamer"
+        <a
+          rel="noopener"
+          target="_blank"
+          href="https://www.facebook.com/lennert.moorthamer"
           ><fa class="icon" :icon="['fab', 'facebook']"
         /></a>
         <a
+          rel="noopener"
           target="_blank"
           href="https://www.linkedin.com/in/lennert-moorthamer-143b0b1b5/"
           ><fa class="icon" :icon="['fab', 'linkedin']"

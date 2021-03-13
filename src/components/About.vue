@@ -48,7 +48,7 @@ export default {
   },
     created() {
     this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
-    this.tel = atob("MDQ3MTQ5NzM4NA==")
+    this.tel = atob("MDQ3MSA0OSA3MyA4NA==")
   }
 };
 </script>
