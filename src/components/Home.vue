@@ -32,7 +32,6 @@
 <script>
 
 import picture from '../assets/pf.jpg';
-import logo from '../assets/logo.png';
 
 export default {
   name: 'Home',
@@ -41,8 +40,7 @@ export default {
      return {
         pf: picture,
         mail: "",
-        tel: "",
-        logo: logo,
+        tel: ""
     }
   },
   created() {
