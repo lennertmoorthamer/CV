@@ -36,12 +36,18 @@
         <skills-page :animation="this.skillsAnimations" />
         <div class="line skillsLine"></div>
         <div class="circle skillsCircle"></div>
-        <img
-          class="wave"
-          :class="{ waveAnimation: this.skillsAnimations }"
-          :src="wave"
-          alt="wave"
-        />
+        <div class="wave">
+          <svg
+            viewBox="0 0 500 150"
+            preserveAspectRatio="none"
+            style="height: 100%; width: 100%"
+          >
+            <path
+              d="M-0.97,99.12 C189.21,-132.74 265.95,300.41 500.72,27.09 L500.00,149.98 L0.01,149.98 Z"
+              style="stroke: none; fill: #fdec00"
+            ></path>
+          </svg>
+        </div>
       </section>
     </div>
   </div>
@@ -55,14 +61,12 @@ import Experience from './components/Experience.vue';
 import HomePage from './components/Home.vue';
 import About from './components/About.vue';
 import SkillsPage from './components/Skills.vue';
-import waveImage from './assets/wave.png';
 
 export default {
   name: 'Index',
   components: { Navbar, Experience, About, HomePage, SkillsPage },
   data(){
     return{
-      wave: waveImage,
       aboutAnimations: false,
       skillsAnimations: false,
     }
@@ -229,21 +233,7 @@ export default {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 20%;
-  }
-
-  .waveAnimation {
-    animation-name: waveUp;
-    animation-duration: 3s;
-  }
-
-  @keyframes waveUp {
-    0% {
-      height: 0%;
-    }
-    100% {
-      height: 20%;
-    }
+    height: 25%;
   }
 
   @media only screen and (max-width: 1400px) {
