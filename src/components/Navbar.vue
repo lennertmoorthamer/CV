@@ -151,7 +151,7 @@ export default {
   .bm-menu {
     background-color: rgba(56, 56, 58, 0.9);
   }
-  .bm-item-list {
+  .bm-item-list > a {
     color: #f4f5f5;
     font-size: 1.2em;
   }
