@@ -3,8 +3,8 @@
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
-      <h2>Student Toegepaste Informatica - Full stack</h2>
-      <h2>Karel De Grote Hogeschool</h2>
+      <h2>Functioneel Analist</h2>
+      <h2>TALENT-IT</h2>
       <div class="iconHolder">
         <a
           rel="noopener"
@@ -15,7 +15,7 @@
         <a
           rel="noopener"
           target="_blank"
-          href="https://www.linkedin.com/in/lennert-moorthamer-143b0b1b5/"
+          href="https://www.linkedin.com/in/lennertmoorthamer/"
           ><fa class="icon" :icon="['fab', 'linkedin']"
         /></a>
         <a :href="'tel:' + this.tel"
