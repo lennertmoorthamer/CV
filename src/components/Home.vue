@@ -3,8 +3,7 @@
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
-      <h2>Functioneel Analist</h2>
-      <h2>TALENT-IT</h2>
+      <h2>Functioneel Analist - TALENT-IT</h2>
       <div class="iconHolder">
         <a
           rel="noopener"
