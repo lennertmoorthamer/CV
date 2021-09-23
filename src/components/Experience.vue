@@ -32,7 +32,7 @@ export default {
         {"company" : "Studant", "locatie" : "2000 Antwerpen", "title" : "Bijles Informatica aan Hogeschool", "pic" : studant},
         {"company" : "Alten BE", "locatie" : "1060 Bruxelles", "title" : "IT Dienst", "pic" : alten},
         // {"company" : "Purna Pharmaceuticals", "locatie" : "2870 Puurs", "title" : "Verpakking", "pic" : purna},
-        {"company" : "Talent-IT", "locatie" : "2870 Puurs", "title" : "Verpakking", "pic" : talit},
+        {"company" : "Talent-IT", "locatie" : "2030 Antwerpen", "title" : "Functioneel Analist", "pic" : talit},
       ]
     };
   }
