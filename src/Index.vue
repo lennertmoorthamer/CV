@@ -57,10 +57,10 @@
 
 
 import Navbar from './components/Navbar.vue';
-import Experience from './components/Experience.vue';
-import HomePage from './components/Home.vue';
-import About from './components/About.vue';
-import SkillsPage from './components/Skills.vue';
+import Experience from './pages/Experience.vue';
+import HomePage from './pages/Home.vue';
+import About from './pages/About.vue';
+import SkillsPage from './pages/Skills.vue';
 
 export default {
   name: 'Index',

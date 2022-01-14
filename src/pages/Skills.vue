@@ -2,45 +2,33 @@
   <div class="skillsHolder">
     <div class="prog">
       <div class="progress-circle-container">
-        <div class="progress-circle progress-90">
+        <div class="progress-circle progress-100">
           <span>
-            <p>Java</p>
-            <p>90%</p>
+            <p>Nederlands</p>
           </span>
         </div>
       </div>
       <div class="progress-circle-container">
-        <div class="progress-circle progress-90">
+        <div class="progress-circle progress-80">
           <span>
-            <p>Javascript</p>
-            <p>90%</p>
+            <p>Engels</p>
           </span>
         </div>
       </div>
       <div class="progress-circle-container">
-        <div class="progress-circle progress-70">
+        <div class="progress-circle progress-30">
           <span>
-            <p>C#</p>
-            <p>70%</p>
-          </span>
-        </div>
-      </div>
-      <div class="progress-circle-container">
-        <div class="progress-circle progress-50">
-          <span>
-            <p>Python</p>
-            <p>50%</p>
+            <p>Frans</p>
           </span>
         </div>
       </div>
     </div>
     <div class="holder" :class="{ animateText: animation }">
       <div class="taal">
-        <h2>Talenkennis</h2>
-        <p>Nederlands: Moedertaal</p>
-        <p>Engels: goed</p>
-        <p>Frans: basiskennis</p>
-        <p>Duits: basiskennis</p>
+        <h2>Technische skills</h2>
+        <p>Java, Javascript, HTML, SCSS</p>
+        <p>Spring, Vue, React</p>
+        <p>UML, BPMN, SQL</p>
       </div>
       <div class="vaar">
         <h2>Vaardigheden</h2>
@@ -119,12 +107,7 @@ export default {
         z-index: 1;
 
         p {
-          margin: 0;
-          height: 3vh;
-
-          &:first-child {
-            margin-top: 2vh;
-          }
+          margin-top: 3vh;
         }
       }
     }
@@ -136,9 +119,13 @@ export default {
       height: 100%;
       border-radius: 50%;
     }
-    .progress-circle.progress-90:after {
+    .progress-circle.progress-100:after {
+      background-color: var(--primary);
+    }
+
+    .progress-circle.progress-80:after {
       background-image: linear-gradient(
-          54deg,
+          35deg,
           var(--primary) 50%,
           transparent 50%,
           transparent
@@ -151,22 +138,7 @@ export default {
         );
     }
 
-    .progress-circle.progress-70:after {
-      background-image: linear-gradient(
-          -18deg,
-          var(--primary) 50%,
-          transparent 50%,
-          transparent
-        ),
-        linear-gradient(
-          270deg,
-          var(--primary) 50%,
-          var(--grey) 50%,
-          var(--grey)
-        );
-    }
-
-    .progress-circle.progress-50:after {
+    .progress-circle.progress-30:after {
       background-image: linear-gradient(
           -90deg,
           var(--primary) 50%,
@@ -214,8 +186,8 @@ export default {
           margin-left: -4vh;
           margin-top: -4vh;
 
-          p:first-child {
-            margin-top: 1vh;
+          p {
+            margin-top: 2vh;
           }
         }
       }
@@ -244,8 +216,8 @@ export default {
         margin-left: -6vw;
         margin-top: -6vw;
 
-        p:first-child {
-          margin-top: 0vh;
+        p {
+          margin-top: 1vh;
         }
       }
     }
