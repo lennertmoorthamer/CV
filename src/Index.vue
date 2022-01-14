@@ -111,6 +111,7 @@ export default {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 
