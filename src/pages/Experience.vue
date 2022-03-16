@@ -11,10 +11,11 @@ import sheer from '../assets/sheerenshuis.png';
 // import niko from '../assets/Niko.png';
 // import wbt from '../assets/wbt.png';
 import volvo from '../assets/volvo.png';
-import prana from '../assets/prana.svg';
+// import prana from '../assets/prana.svg';
 import studant from '../assets/studant.png';
 import alten from '../assets/alten.png';
 import talit from '../assets/talit.png';
+import vh from '../assets/vh.png';
 import xpItem from '../components/xpItem.vue';
 
 export default {
@@ -26,13 +27,14 @@ export default {
         xps: [
         {"company" : "Restaurant S'Heerenshuis", "locatie" : "9120 Melsele", "title" : "Afwasser/Ober", "pic" : sheer},
         // {"company" : "Niko Group", "locatie" : "9100 Sint-Niklaas", "title" : "Monteren schakelaars", "pic" : niko},
-        {"company" : "Prananatha", "locatie" : "9250 Waasmunster", "title" : "Magazijnier", "pic" : prana},
+        // {"company" : "Prananatha", "locatie" : "9250 Waasmunster", "title" : "Magazijnier", "pic" : prana},
+        {"company" : "Van Hoecke", "locatie" : "9100 Sint-Niklaas", "title" : "Logistiek medewerker", "pic" : vh},
         // {"company" : "Wij blijven thuis", "locatie" : "9100 Sint-Niklaas", "title" : "Logistiek medewerker", "pic" : wbt},
         {"company" : "Volvo Trucks", "locatie" : "9041 Gent", "title" : "Plaatsen benzinetanks/Banden spannen", "pic" : volvo},
         {"company" : "Studant", "locatie" : "2000 Antwerpen", "title" : "Bijles Informatica aan Hogeschool", "pic" : studant},
         {"company" : "Alten BE", "locatie" : "1060 Bruxelles", "title" : "IT Dienst", "pic" : alten},
         // {"company" : "Purna Pharmaceuticals", "locatie" : "2870 Puurs", "title" : "Verpakking", "pic" : purna},
-        {"company" : "Talent-IT", "locatie" : "2030 Antwerpen", "title" : "Functioneel analist", "pic" : talit},
+        {"company" : "Talent-IT", "locatie" : "2030 Antwerpen", "title" : "Functioneel Analist - SD Worx", "pic" : talit},
       ]
     };
   }
