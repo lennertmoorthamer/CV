@@ -50,7 +50,8 @@ export default {
     this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
     this.tel = atob("MDQ3MSA0OSA3MyA4NA==")
   }
-};
+}
+  
 </script>
 
 <style lang="scss" scoped>

@@ -87,6 +87,9 @@ export default {
     handleSkillAnimation(event){
       this.aboutAnimations = false
       this.skillsAnimations = event
+    },
+    temp(){
+      console.log("temp")
     }
   }
 };
