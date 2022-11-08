@@ -39,6 +39,19 @@
         <p>Vlot in de omgang</p>
       </div>
     </div>
+    <!-- :class="{ animateWave: animation }" -->
+    <div class="wave">
+      <svg
+        viewBox="0 0 500 150"
+        preserveAspectRatio="none"
+        style="height: 100%; width: 100%"
+      >
+        <path
+          d="M-0.97,99.12 C189.21,-132.74 265.95,300.41 500.72,27.09 L500.00,149.98 L0.01,149.98 Z"
+          style="fill: #fdec00"
+        ></path>
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -160,6 +173,13 @@ export default {
     .vaar {
       margin-top: 10vh;
     }
+  }
+  .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
   }
 }
 

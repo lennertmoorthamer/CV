@@ -4,7 +4,7 @@
       id="menu"
       v-on:home="handleHomeAnimation()"
       v-on:about="handleAboutAnimation($event)"
-      v-on:experience="handleExperienceAnimation()"
+      v-on:experience="handleExperienceAnimation($event)"
       v-on:skill="handleSkillAnimation($event)"
     />
     <div id="indexHolder">
@@ -26,7 +26,7 @@
         <div class="circle aboutCircleDown"></div>
       </section>
       <section id="Experience">
-        <experience />
+        <experience :animation="this.experienceAnimations" />
         <div class="line experienceLine"></div>
         <div class="circle experienceCircle"></div>
         <div class="line experienceLineDown"></div>
@@ -36,18 +36,6 @@
         <skills-page :animation="this.skillsAnimations" />
         <div class="line skillsLine"></div>
         <div class="circle skillsCircle"></div>
-        <div class="wave">
-          <svg
-            viewBox="0 0 500 150"
-            preserveAspectRatio="none"
-            style="height: 100%; width: 100%"
-          >
-            <path
-              d="M-0.97,99.12 C189.21,-132.74 265.95,300.41 500.72,27.09 L500.00,149.98 L0.01,149.98 Z"
-              style="stroke: none; fill: #fdec00"
-            ></path>
-          </svg>
-        </div>
       </section>
     </div>
   </div>
@@ -69,24 +57,29 @@ export default {
     return{
       aboutAnimations: false,
       skillsAnimations: false,
+      experienceAnimations: false,
     }
   },
   methods:{
     handleHomeAnimation(){
       this.aboutAnimations = false
       this.skillsAnimations = false
+      this.experienceAnimations = false
     },
     handleAboutAnimation(event){
       this.aboutAnimations = event
       this.skillsAnimations = false
+      this.experienceAnimations = false
     },
-    handleExperienceAnimation(){
+    handleExperienceAnimation(event){
       this.aboutAnimations = false
       this.skillsAnimations = false
+      this.experienceAnimations = event
     },
     handleSkillAnimation(event){
       this.aboutAnimations = false
       this.skillsAnimations = event
+      this.experienceAnimations = false
     }
   }
 };
@@ -227,14 +220,6 @@ export default {
     left: calc(20% - 1.5vh - 3px);
     top: 60%;
     border: 3px solid var(--primary);
-  }
-
-  .wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 25%;
   }
 
   @media only screen and (max-width: 1400px) {

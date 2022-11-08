@@ -1,7 +1,7 @@
 <template>
   <div class="aboutHolder">
     <div class="contentHolder">
-      <div class="dipl" :class="{ animateText: this.animation }">
+      <div class="dipl" :class="{ animateText: animation }">
         <h1>Diploma's</h1>
         <h2>Middelbaar Onderwijs</h2>
         <p>Boekhouden Informatica</p>

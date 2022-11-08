@@ -30,35 +30,57 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .animateText {
-    -webkit-animation: animateTextFade 1.5s 1, animateTextOpacity 3s 1; /* Safari 4+ */
-    -moz-animation: animateTextFade 1.5s 1, animateTextOpacity 3s 1; /* Fx 5+ */
-    -o-animation: animateTextFade 1.5s 1, animateTextOpacity 3s 1; /* Opera 12+ */
-    animation: animateTextFade 1.5s 1, animateTextOpacity 3s 1; /* IE 10+, Fx 29+ */
+    -webkit-animation: animateFade 1.5s 1, animateOpacity 3s 1; /* Safari 4+ */
+    -moz-animation: animateFade 1.5s 1, animateOpacity 3s 1; /* Fx 5+ */
+    -o-animation: animateFade 1.5s 1, animateOpacity 3s 1; /* Opera 12+ */
+    animation: animateFade 1.5s 1, animateOpacity 3s 1; /* IE 10+, Fx 29+ */
+  }
+  @keyframes animateOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animateFade {
+    -webkit-animation: animateFade 1s 1;
+    -moz-animation: animateFade 1s 1;
+    -o-animation: animateFade 1s 1;
+    animation: animateFade 1s 1;
+  }
+  @keyframes animateFade {
+    0% {
+      padding-top: 5%;
+    }
+    100% {
+      padding-top: 0%;
+    }
+  }
+
+  .animateWave {
+    position: absolute;
+    -webkit-animation: animateWave 1.5s 1;
+    -moz-animation: animateWave 1.5s 1;
+    -o-animation: animateWave 1.5s 1; 
+    animation: animateWave 1.5s 1;
+  }
+  @keyframes animateWave {
+    0% {
+      bottom: -50%;
+    }
+    100% {
+      bottom: 0%;
+    }
   }
 }
 
-@keyframes animateTextOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes animateTextFade {
-  0% {
-    padding-top: 10%;
-  }
-  100% {
-    padding-top: 0%;
-  }
-}
 
 @media only screen and (max-width: 1200px) {
   p {
@@ -74,7 +96,7 @@ h3 {
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
@@ -92,7 +114,7 @@ h3 {
   }
 
   h3 {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
 }
 
@@ -110,6 +132,6 @@ h3 {
   }
 
   h3 {
-    font-size: 0.7em;
+    font-size: 0.5em;
   }
 }

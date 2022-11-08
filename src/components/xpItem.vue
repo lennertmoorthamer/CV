@@ -1,9 +1,14 @@
 <template>
   <div class="container">
-    <img :src="item.pic" alt="company" />
-    <div class="info">
-      <h3>{{ item.company }} | {{ item.locatie }}</h3>
-      <h3>{{ item.title }}</h3>
+    <h2>{{ item.title }}</h2>
+    <div class="jobContainer">
+      <div class="job" v-for="(job, i) in item.items" :key="i" :item="job">
+        <img :src="job.pic" alt="company" />
+        <div class="info">
+          <h3>{{ job.company }} | {{ job.locatie }}</h3>
+          <h3>{{ job.desc }}</h3>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -27,56 +32,53 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  height: 12vh;
   border-radius: 0.5em;
   background-color: var(--dark);
   width: 45%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 2vh;
   color: var(--grey);
   z-index: 2;
+  margin: 0 1%;
+  height: 100%;
 
-  img {
-    box-shadow: 8px 0 10px -10px var(--black);
-    padding: 1em;
-    width: 5vw;
-    height: 5vw;
-    object-fit: contain;
+  h2 {
+    margin-left: 10%;
   }
 
-  .info {
-    width: 70%;
+  .jobContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .job {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+
+      img {
+        box-shadow: 8px 0 10px -10px var(--black);
+        padding: 1em;
+        width: 3vw;
+        height: 3vw;
+        object-fit: contain;
+      }
+
+      .info {
+        margin-left: 3%;
+        h3 {
+          margin: 2px;
+        }
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 800px) {
-  h3 {
-    font-size: 0.6em;
-  }
-
   .container {
-    height: 9vh;
-    width: 60%;
-    margin: 1vh;
-    color: var(--grey);
-    z-index: 2;
-
-    img {
-      box-shadow: 8px 0 10px -10px var(--black);
-      width: 7vw;
-      height: 9vw;
-      object-fit: contain;
-      padding: 0;
-      padding-left: 1vw;
-      padding-right: 1vw;
-    }
-
-    .info {
-      width: 80%;
-    }
+    width: 100%;
+    margin-bottom: 2%;
   }
 }
 </style>
