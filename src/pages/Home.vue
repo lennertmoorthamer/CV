@@ -95,4 +95,14 @@ export default {
     }
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .homeHolder {
+    width: 95%;
+
+    .pf {
+      width: 16%;
+    }
+  }
+}
 </style>
