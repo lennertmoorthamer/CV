@@ -3,7 +3,7 @@
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
-      <h2>Functioneel Analist • Talent-IT</h2>
+      <h2>Product Owner • TUI</h2>
       <div class="iconHolder">
         <a
           rel="noopener"

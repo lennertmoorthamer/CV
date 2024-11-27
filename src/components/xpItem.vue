@@ -34,14 +34,14 @@ export default {
 .container {
   border-radius: 0.5em;
   background-color: var(--dark);
-  width: 45%;
+  width: 60%;
   color: var(--grey);
   z-index: 2;
   margin: 0 1%;
   height: 100%;
 
   h2 {
-    margin-left: 10%;
+    margin-left: 5%;
   }
 
   .jobContainer {
@@ -59,10 +59,11 @@ export default {
 
       img {
         box-shadow: 8px 0 10px -10px var(--black);
-        padding: 1em;
-        width: 3vw;
-        height: 3vw;
+        margin: 1vw;
+        width: 5vw;
+        height: 5vw;
         object-fit: contain;
+        border-radius: 50%;
       }
 
       .info {
@@ -75,10 +76,23 @@ export default {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   .container {
     width: 100%;
-    margin-bottom: 2%;
+
+    .jobContainer {
+      margin-bottom: 2%;
+
+      .job {
+        height: 7vh;
+        margin-top: 2%;
+
+        img {
+          width: 7vw;
+          height: 7vw;
+        }
+      }
+    }
   }
 }
 </style>

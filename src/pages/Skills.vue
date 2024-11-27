@@ -4,39 +4,40 @@
       <div class="progress-circle-container">
         <div class="progress-circle progress-100">
           <span>
-            <p>Nederlands</p>
+            <p>Dutch</p>
           </span>
         </div>
       </div>
       <div class="progress-circle-container">
         <div class="progress-circle progress-80">
           <span>
-            <p>Engels</p>
+            <p>English</p>
           </span>
         </div>
       </div>
       <div class="progress-circle-container">
         <div class="progress-circle progress-30">
           <span>
-            <p>Frans</p>
+            <p>French</p>
           </span>
         </div>
       </div>
     </div>
     <div class="holder" :class="{ animateText: animation }">
       <div class="taal">
-        <h2>Technische skills</h2>
+        <h2>Technical skills</h2>
         <p>Java, Javascript, HTML, SCSS</p>
         <p>Spring, Vue, React</p>
         <p>UML, BPMN, SQL</p>
+        <p>Jira, AWS</p>
       </div>
       <div class="vaar">
-        <h2>Vaardigheden</h2>
-        <p>Organisatorisch</p>
-        <p>Communicatief</p>
-        <p>Handig</p>
-        <p>Flexibel</p>
-        <p>Vlot in de omgang</p>
+        <h2>Skills</h2>
+        <p>Organising</p>
+        <p>Communicative</p>
+        <p>Flexible</p>
+        <p>Problem solving</p>
+        <p>Motivated</p>
       </div>
     </div>
     <!-- :class="{ animateWave: animation }" -->

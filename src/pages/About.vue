@@ -2,26 +2,25 @@
   <div class="aboutHolder">
     <div class="contentHolder">
       <div class="dipl" :class="{ animateText: animation }">
-        <h1>Diploma's</h1>
-        <h2>Middelbaar Onderwijs</h2>
-        <p>Boekhouden Informatica</p>
+        <h1>Diplomas</h1>
+        <h2>Secondary Education</h2>
+        <p>Accounting and Computer Science</p>
         <p>Sint-Maarten Bovenschool - 9120 Beveren</p>
-        <h2>Professionele Bachelor</h2>
-        <p>Toegepaste Informatica</p>
-        <p>Afstudeerrichting Full Stack</p>
-        <p>Karel De Grote Hogeschool - 2000 Antwerpen</p>
-        <p>Microservices & User Experience</p>
-        <h2>Extra</h2>
-        <p>Rijbewijs B</p>
-        <p>Vaarbewijs - Algemeen stuurbrevet</p>
+        <h2>Professional Bachelor's Degree</h2>
+        <p>Applied Computer Science - Full Stack</p>
+        <p>Specialization in Microservices & User Experience</p>
+        <p>Karel De Grote University College - 2000 Antwerp</p>
+        <h2>Additional</h2>
+        <p>Driver's License B</p>
+        <p>Boating License - General Steering Certificate</p>
       </div>
       <div class="pers" :class="{ animateText: animation }">
-        <h2>Woonplaats</h2>
+        <h2>Residence</h2>
         <p>Elsstraat-Zuid, 9140 Temse</p>
-        <h2>Nationaliteit</h2>
-        <p>Belg</p>
-        <h2>Geboortedatum</h2>
-        <p>10 Augustus 1999</p>
+        <h2>Nationality</h2>
+        <p>Belgian</p>
+        <h2>Date of Birth</h2>
+        <p>August 10, 1999</p>
         <h2>Contact</h2>
         <p>{{ this.tel }}</p>
         <p>{{ this.mail }}</p>
