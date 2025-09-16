@@ -27,17 +27,16 @@
       <div class="taal">
         <h2>Technical skills</h2>
         <p>Java, Javascript, HTML, SCSS</p>
-        <p>Spring, Vue, React</p>
+        <p>Vue, React</p>
         <p>UML, BPMN, SQL</p>
         <p>Jira, AWS</p>
       </div>
       <div class="vaar">
-        <h2>Skills</h2>
-        <p>Organising</p>
-        <p>Communicative</p>
-        <p>Flexible</p>
-        <p>Problem solving</p>
-        <p>Motivated</p>
+        <h2>Soft skills</h2>
+        <p>Agile, Scrum</p>
+        <p>Change management</p>
+        <p>Delivery management</p>
+        <p>Stakeholder management</p>
       </div>
     </div>
     <!-- :class="{ animateWave: animation }" -->

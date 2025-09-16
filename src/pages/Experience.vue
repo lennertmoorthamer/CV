@@ -23,10 +23,10 @@ export default {
      return {
         xps: [
         {"title" : "Experience", "items":[
-          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Functional Analyst - SD Worx", "pic" : talentit},
-          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Business Analyst - TUI", "pic" : talentit},
-          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Product Owner - TUI", "pic" : talentit},
-          {"company" : "TUI", "locatie" : "8400 Ostend", "desc" : "Product Owner - TUI", "pic" : tui},
+          {"company" : "TUI", "locatie" : "8400 Ostend", "desc" : "Product Owner - TUI", "pic" : tui, "period" : "2024 - Now"},
+          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Product Owner - TUI", "pic" : talentit, "period" : "2023 - 2024"},
+          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Business Analyst - TUI", "pic" : talentit, "period" : "2022 - 2023"},
+          {"company" : "Talent-IT", "locatie" : "2030 Antwerp", "desc" : "Functional Analyst - SD Worx", "pic" : talentit, "period" : "2021 - 2022"},
         ]},
       ]
     };
@@ -46,5 +46,4 @@ h2 {
   width: 75%;
   margin-top: 5vh;
 }
-
 </style>

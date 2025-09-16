@@ -7,6 +7,7 @@
         <div class="info">
           <h3>{{ job.company }} | {{ job.locatie }}</h3>
           <h3>{{ job.desc }}</h3>
+          <h3>{{ job.period }}</h3>
         </div>
       </div>
     </div>
@@ -16,7 +17,7 @@
 <script>
 
 export default {
-  name: 'XpItem',
+  name: 'XpItem', 
   props:{
      item: {
       type: Object,
