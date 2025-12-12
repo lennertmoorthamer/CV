@@ -16,7 +16,7 @@
       </div>
       <div class="pers" :class="{ animateText: animation }">
         <h2>Residence</h2>
-        <p>Prosper Van Raemdonckstraat, 9120 Beveren</p>
+        <p>Elsstraat-Zuid, 9140 Temse</p>
         <h2>Nationality</h2>
         <p>Belgian</p>
         <h2>Date of Birth</h2>
