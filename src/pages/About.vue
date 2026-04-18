@@ -2,7 +2,7 @@
   <div class="aboutHolder">
     <div class="contentHolder">
       <div class="dipl" :class="{ animateText: animation }">
-        <h1>Diplomas</h1>
+        <h1>Education & Certifications</h1>
         <h2>Secondary Education</h2>
         <p>Accounting and Computer Science</p>
         <p>Sint-Maarten Bovenschool - 9120 Beveren</p>
@@ -16,9 +16,7 @@
       </div>
       <div class="pers" :class="{ animateText: animation }">
         <h2>Residence</h2>
-        <p>Elsstraat-Zuid, 9140 Temse</p>
-        <h2>Nationality</h2>
-        <p>Belgian</p>
+        <p>Belgium | 9140 Temse</p>
         <h2>Date of Birth</h2>
         <p>August 10, 1999</p>
         <h2>Contact</h2>
@@ -46,8 +44,8 @@ export default {
     };
   },
     created() {
-    this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
-    this.tel = atob("MDQ3MSA0OSA3MyA4NA==")
+    this.mail = atob("bGVubmVydG1vb3J0aGFtZXJAaG90bWFpbC5jb20=")
+    this.tel = atob('KzMyIDQ3MSA0OSA3MyA4NA==')
   }
 }
   

@@ -3,25 +3,19 @@
     <img class="pf" :src="pf" alt="Profile picture" />
     <div>
       <h1>Lennert Moorthamer</h1>
-      <h2>Product Owner • TUI</h2>
+      <h2>Certified Product Owner • TUI</h2>
       <div class="iconHolder">
-        <a
-          rel="noopener"
-          target="_blank"
-          href="https://www.facebook.com/lennert.moorthamer"
-          ><fa class="icon" :icon="['fab', 'facebook']"
+         <a :href="'mailto:' + this.mail"
+          ><fa class="icon" :icon="['fas', 'envelope']"
+        /></a>
+        <a :href="'tel:' + this.tel"
+          ><fa class="icon" :icon="['fas', 'phone-square-alt']"
         /></a>
         <a
           rel="noopener"
           target="_blank"
           href="https://www.linkedin.com/in/lennertmoorthamer/"
           ><fa class="icon" :icon="['fab', 'linkedin']"
-        /></a>
-        <a :href="'tel:' + this.tel"
-          ><fa class="icon" :icon="['fas', 'phone-square-alt']"
-        /></a>
-        <a :href="'mailto:' + this.mail"
-          ><fa class="icon" :icon="['fas', 'envelope']"
         /></a>
       </div>
     </div>
@@ -43,8 +37,8 @@ export default {
     }
   },
   created() {
-    this.mail = atob("bGVubmVydG1vb3J0aGFtZXIyQGhvdG1haWwuY29t")
-    this.tel = atob("MDQ3MTQ5NzM4NA==")
+    this.mail = atob("bGVubmVydG1vb3J0aGFtZXJAaG90bWFpbC5jb20=")
+    this.tel = atob('KzMyIDQ3MSA0OSA3MyA4NA==')
   }
 };
 </script>

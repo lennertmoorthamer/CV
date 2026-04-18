@@ -15,6 +15,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./sass/global.scss";
+@use "./sass/global.scss";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
 </style>

@@ -15,28 +15,20 @@
           </span>
         </div>
       </div>
-      <div class="progress-circle-container">
-        <div class="progress-circle progress-30">
-          <span>
-            <p>French</p>
-          </span>
-        </div>
-      </div>
     </div>
     <div class="holder" :class="{ animateText: animation }">
       <div class="taal">
         <h2>Technical skills</h2>
-        <p>Java, Javascript, HTML, SCSS</p>
-        <p>Vue, React</p>
+        <p>Java, Javascript, HTML, SCSS, Vue, React</p>
         <p>UML, BPMN, SQL</p>
-        <p>Jira, AWS</p>
+        <p>Jira, Confluence, AWS</p>
       </div>
       <div class="vaar">
         <h2>Soft skills</h2>
         <p>Agile, Scrum</p>
-        <p>Change management</p>
-        <p>Delivery management</p>
         <p>Stakeholder management</p>
+        <p>Delivery management</p>
+        <p>Agile, Scrum, SAFe</p>
       </div>
     </div>
     <!-- :class="{ animateWave: animation }" -->
@@ -99,7 +91,7 @@ export default {
       position: relative;
       width: 12vh;
       height: 12vh;
-      margin-top: 1vh;
+      margin-top: 4vh;
       margin-left: 3vw;
       border-radius: 50%;
 
@@ -138,28 +130,13 @@ export default {
 
     .progress-circle.progress-80:after {
       background-image: linear-gradient(
-          35deg,
+          90deg,
           var(--primary) 50%,
           transparent 50%,
           transparent
         ),
         linear-gradient(
-          270deg,
-          var(--primary) 50%,
-          var(--grey) 50%,
-          var(--grey)
-        );
-    }
-
-    .progress-circle.progress-30:after {
-      background-image: linear-gradient(
-          -90deg,
-          var(--primary) 50%,
-          transparent 50%,
-          transparent
-        ),
-        linear-gradient(
-          270deg,
+          -45deg,
           var(--primary) 50%,
           var(--grey) 50%,
           var(--grey)

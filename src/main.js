@@ -7,7 +7,6 @@ import VueParticles from 'vue-particles';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
-  faFacebook,
   faLinkedin
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -17,7 +16,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
-  faFacebook,
   faLinkedin,
   faPhoneSquareAlt,
   faEnvelope
